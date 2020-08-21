@@ -41,9 +41,9 @@ public:
 
     virtual double calculatePriceWithTax();
 
-    void save(const std::string &filename);
+    virtual void save(const std::string &filename);
 
-    std::string toString();
+    virtual std::string toString();
 private:
     std::string name;
     double price;

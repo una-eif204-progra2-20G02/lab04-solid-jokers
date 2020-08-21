@@ -6,13 +6,17 @@
 #define LAB04_SOLID_STREAMING_H
 #include <iostream>
 #include "IReplace.h"
+#include "Game.h"
 
 using namespace std;
-class Streaming : public IReplace {
+
+class Streaming : public IReplace, Game {
 public:
-    Streaming();
+    Streaming(string name, double price, double itemWeight, string productDimensions);
 
     void replace() override;
+
+    string toString() override;
 
     ~Streaming();
 
