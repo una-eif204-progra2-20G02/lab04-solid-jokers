@@ -8,8 +8,15 @@ void Digital::replace() {
     cout << "This product can be replaced" << endl;
 }
 
-void Digital::discount() {
-    cout << "This product has a discount" << endl;
+double Digital::discount() {
+    double dis;
+    dis= (calculatePriceWithTax()*0.15)-calculatePriceWithTax();
+    return dis;
+}
+
+double Digital::calculatePriceWithTax()
+{
+    return getPrice() + (getPrice() * getTax());
 }
 
 Digital::Digital() {}

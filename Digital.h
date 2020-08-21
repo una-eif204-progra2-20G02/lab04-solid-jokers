@@ -7,15 +7,18 @@
 #include "iostream"
 #include "IDiscount.h"
 #include "IReplace.h"
+#include "Game.h"
 
 using namespace std;
-class Digital : public IDiscount, IReplace {
+class Digital : public IDiscount, IReplace, Game {
 public:
     Digital();
 
-    void discount() override;
+    double discount() override;
 
     void replace() override;
+
+    double calculatePriceWithTax() override;
 
     ~Digital();
 };

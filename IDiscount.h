@@ -7,7 +7,7 @@
 
 class IDiscount {
 public:
-    virtual void discount() = 0;
+    virtual double discount() = 0;
 };
 
 #endif //LAB04_SOLID_IDISCOUNT_H
