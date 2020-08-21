@@ -63,13 +63,13 @@ double Game::calculatePriceWithTax() {
  * @param filename the name of the text file
  */
 void Game::save(const std::string &filename) {
-    std::ofstream ofs (filename, std::ofstream::out);
+   ofstream out(filename, ios::out);
 
-    ofs << toString();
+    out << toString();
 
-    ofs.close();
+    out.close();
 }
 
-std::string Game::toString() {
-
+string Game::toString() {
+    return "";
 }
