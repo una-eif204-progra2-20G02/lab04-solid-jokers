@@ -38,7 +38,7 @@ using namespace std;
 
     void setProductDimensions(const std::string &productDimensions);
 
-    double calculatePriceWithTax();
+    virtual double calculatePriceWithTax();
 
     virtual void save(const std::string &filename);
 
