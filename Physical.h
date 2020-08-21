@@ -10,10 +10,10 @@
 #include "Game.h"
 using namespace std;
 
-class Physical : public IShipment, Game {
+class Physical : IShipment, public Game {
 
 public:
-    Physical(string name, double price, double itemWeight, string productDimensions);
+    Physical(string name, double price, double itemWeight, string productDimensions, double tax);
 
     void shipment() override;
 

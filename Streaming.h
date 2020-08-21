@@ -10,9 +10,10 @@
 
 using namespace std;
 
-class Streaming : public IReplace, Game {
+class Streaming : IReplace, public Game {
+
 public:
-    Streaming(string name, double price, double itemWeight, string productDimensions);
+    Streaming(string name, double price, double itemWeight, string productDimensions, double tax);
 
     void replace() override;
 

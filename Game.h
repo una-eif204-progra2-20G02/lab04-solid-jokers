@@ -10,18 +10,17 @@
 
 using namespace std;
 
-class Game {
-public:
-    Game();
+ class Game {
+ public:
+     Game();
 
-    Game(const std::string &name, double price, double tax);
+     Game(const std::string &name, double price, double tax);
 
-    Game(const std::string &name, double price, double itemWeight, const std::string &productDimensions);
+     Game(const std::string &name, double price, double itemWeight, const std::string &productDimensions, double tax);
 
+     const std::string &getName() const;
 
-    const std::string &getName() const;
-
-    void setName(const std::string &name);
+     void setName(const std::string &name);
 
     double getPrice() const;
 

@@ -11,8 +11,8 @@ Game::Game() {}
 Game::Game(const std::string &name, double price, double tax) : name(name), price(price), tax(tax) {}
 
 Game::Game(const std::string &name, double price, double itemWeight,
-           const std::string &productDimensions) : name(name), price(price), itemWeight(itemWeight),
-           productDimensions(productDimensions) {}
+           const std::string &productDimensions, double tax) : name(name), price(price), itemWeight(itemWeight),
+                                                               productDimensions(productDimensions) {}
 
 const std::string &Game::getName() const {
     return name;
@@ -71,13 +71,5 @@ void Game::save(const std::string &filename) {
 }
 
 std::string Game::toString() {
-    std::ostringstream output;
-    output << std::fixed << std::setprecision(2);
-    output << "Game Name: " << getName()
-           << "\nItem Weight: " << getItemWeight()
-           << "\nProduct Dimensions: " << getProductDimensions()
-           << "\nPrice: $" << getPrice()
-           << "\nPrice with Tax: $" << calculatePriceWithTax();
 
-    return output.str();
 }

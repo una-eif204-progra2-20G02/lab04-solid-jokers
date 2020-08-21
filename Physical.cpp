@@ -5,24 +5,33 @@
 #include <fstream>
 #include "Physical.h"
 
-Physical::Physical(string name, double price, double itemWeight, string productDimensions) : Game(name, price,
-                                                                                                  itemWeight,
-                                                                                                  productDimensions) {
+Physical::Physical(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name,
+                                                                                                              price,
+                                                                                                              itemWeight,
+                                                                                                              productDimensions,
+                                                                                                              tax) {
     setName(name);
     setPrice(price);
     setItemWeight(itemWeight);
     setProductDimensions(productDimensions);
+    setTax(tax);
 }
 
 void Physical::shipment() {
-    cout << "This product can be shipped" << endl;
+    cout << "this product will have a shipment." << endl;
 }
 
 string Physical::toString() {
-    stringstream s;
-    s << toString() << endl;
+    std::ostringstream output;
+    output << std::fixed << std::setprecision(2);
+    output << "Game Name: " << getName()
+           << "\nItem Weight: " << getItemWeight()
+           << "\nProduct Dimensions: " << getProductDimensions()
+           << "\nPrice: $" << getPrice()
+           << "\nPrice with Tax: $" << calculatePriceWithTax() << endl;
     shipment();
-    return s.str();
+    return output.str();
+
 }
 
 Physical::~Physical() {}

@@ -4,18 +4,20 @@
 
 #ifndef LAB04_SOLID_DIGITAL_H
 #define LAB04_SOLID_DIGITAL_H
-#include "iostream"
+
+#include <iostream>
+#include <sstream>
 #include "IDiscount.h"
 #include "IReplace.h"
 #include "Game.h"
 
 using namespace std;
 
-class Digital : public IDiscount, IReplace, Game {
+class Digital : public IDiscount, IReplace, public Game {
 public:
-    Digital(string name, double price, double itemWeight, string productDimensions);
+    Digital(string name, double price, double itemWeight, string productDimensions, double tax);
 
-    void discount() override;
+    double discount() override;
 
     void replace() override;
 
