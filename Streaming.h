@@ -4,9 +4,10 @@
 
 #ifndef LAB04_SOLID_STREAMING_H
 #define LAB04_SOLID_STREAMING_H
-
+#include <iostream>
 #include "IReplace.h"
 
+using namespace std;
 class Streaming : public IReplace {
 public:
     Streaming();

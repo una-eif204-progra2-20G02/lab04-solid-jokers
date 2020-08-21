@@ -4,7 +4,9 @@
 
 #include "Streaming.h"
 
-void Streaming::replace() {}
+void Streaming::replace() {
+    cout << "This product can be replaced" << endl;
+}
 
 Streaming::Streaming() {}
 

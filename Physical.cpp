@@ -6,6 +6,8 @@
 
 Physical::Physical() {}
 
-void Physical::shipment() {}
+void Physical::shipment() {
+    cout << "This product can be shipped" << endl;
+}
 
 Physical::~Physical() {}

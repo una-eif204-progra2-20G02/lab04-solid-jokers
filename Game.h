@@ -4,7 +4,11 @@
 
 #ifndef LAB04_SOLID_GAME_H
 #define LAB04_SOLID_GAME_H
+
 #include <sstream>
+#include <iostream>
+
+using namespace std;
 
 class Game {
 public:
@@ -13,6 +17,7 @@ public:
     Game(const std::string &name, double price, double tax);
 
     Game(const std::string &name, double price, double itemWeight, const std::string &productDimensions);
+
 
     const std::string &getName() const;
 

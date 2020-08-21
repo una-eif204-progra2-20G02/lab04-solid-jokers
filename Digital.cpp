@@ -4,9 +4,13 @@
 
 #include "Digital.h"
 
-void Digital::replace() {}
+void Digital::replace() {
+    cout << "This product can be replaced" << endl;
+}
 
-void Digital::discount() {}
+void Digital::discount() {
+    cout << "This product has a discount" << endl;
+}
 
 Digital::Digital() {}
 
