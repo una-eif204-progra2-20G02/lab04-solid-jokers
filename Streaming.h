@@ -13,7 +13,7 @@ using namespace std;
 class Streaming : IReplace, public Game {
 
 public:
-    Streaming(string name, double price, double itemWeight, string productDimensions, double tax);
+    Streaming(const string& name, double price,double tax, double itemWeight, const string& productDimensions);
 
     void replace() override;
 

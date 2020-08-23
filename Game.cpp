@@ -2,17 +2,21 @@
 // Created by Maikol Guzman on 8/17/20.
 //
 
-#include <iomanip>
 #include <fstream>
+#include <utility>
 #include "Game.h"
 
-Game::Game() {}
+Game::Game() {
+    name="";
+    price=0.0;
+    tax=0.0;
+    itemWeight = 0.0;
+    productDimensions="";
+}
 
-Game::Game(const std::string &name, double price, double tax) : name(name), price(price), tax(tax) {}
+[[maybe_unused]] Game::Game(std::string name, double price, double tax) : name(std::move(name)), price(price), tax(tax){}
 
-Game::Game(const std::string &name, double price, double itemWeight,
-           const std::string &productDimensions, double tax) : name(name), price(price), itemWeight(itemWeight),
-                                                               productDimensions(productDimensions) {}
+Game::Game(std::string name, double price,double tax, double itemWeight,std::string productDimensions) : name(std::move(name)), price(price),tax(tax), itemWeight(itemWeight),productDimensions(std::move(productDimensions)) {}
 
 const std::string &Game::getName() const {
     return name;

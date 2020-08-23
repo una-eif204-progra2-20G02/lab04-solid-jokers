@@ -5,11 +5,7 @@
 #include <fstream>
 #include "Physical.h"
 
-Physical::Physical(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name,
-                                                                                                              price,
-                                                                                                              itemWeight,
-                                                                                                              productDimensions,
-                                                                                                              tax) {
+Physical::Physical(const string& name, double price, double tax,double itemWeight, const string& productDimensions ) : Game(name,price,tax,itemWeight,productDimensions) {
     setName(name);
     setPrice(price);
     setItemWeight(itemWeight);
@@ -34,4 +30,4 @@ string Physical::toString() {
 
 }
 
-Physical::~Physical() {}
+Physical::~Physical() = default;

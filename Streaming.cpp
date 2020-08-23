@@ -10,11 +10,7 @@ void Streaming::replace() {
     cout << "This product can be replaced" << endl;
 }
 
-Streaming::Streaming(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name,
-                                                                                                                price,
-                                                                                                                itemWeight,
-                                                                                                                productDimensions,
-                                                                                                                tax) {
+Streaming::Streaming(const string& name, double price,double tax, double itemWeight, const string& productDimensions) : Game(name,price,tax,itemWeight,productDimensions) {
     setName(name);
     setPrice(price);
     setItemWeight(itemWeight);
@@ -35,4 +31,4 @@ string Streaming::toString() {
 
 }
 
-Streaming::~Streaming() {}
+Streaming::~Streaming() = default;

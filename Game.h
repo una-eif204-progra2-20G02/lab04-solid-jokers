@@ -14,27 +14,27 @@ using namespace std;
  public:
      Game();
 
-     Game(const std::string &name, double price, double tax);
+     [[maybe_unused]] Game(std::string name, double price, double tax);
 
-     Game(const std::string &name, double price, double itemWeight, const std::string &productDimensions, double tax);
+     Game(std::string name, double price, double tax, double itemWeight, std::string productDimensions);
 
-     const std::string &getName() const;
+     [[nodiscard]] const std::string &getName() const;
 
      void setName(const std::string &name);
 
-    double getPrice() const;
+    [[nodiscard]] double getPrice() const;
 
     void setPrice(double price);
 
-    double getTax() const;
+    [[nodiscard]] double getTax() const;
 
     void setTax(double tax);
 
-    double getItemWeight() const;
+    [[nodiscard]] double getItemWeight() const;
 
     void setItemWeight(double itemWeight);
 
-    const std::string &getProductDimensions() const;
+    [[nodiscard]] const std::string &getProductDimensions() const;
 
     void setProductDimensions(const std::string &productDimensions);
 
@@ -47,7 +47,7 @@ private:
     std::string name;
     double price;
     double tax;
-    double itemWeight;
+    double itemWeight{};
     std::string productDimensions;
 };
 

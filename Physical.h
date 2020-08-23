@@ -13,7 +13,7 @@ using namespace std;
 class Physical : IShipment, public Game {
 
 public:
-    Physical(string name, double price, double itemWeight, string productDimensions, double tax);
+    Physical(const string& name, double price,double tax, double itemWeight, const string& productDimensions);
 
     void shipment() override;
 

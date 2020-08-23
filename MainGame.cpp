@@ -6,15 +6,14 @@
 #include "Game.h"
 #include "Physical.h"
 #include "Digital.h"
-#include "Streaming.h"
-#include <sstream>
+
 
 using namespace std;
 
 int main() {
-    Digital *game = new Digital("Call of Duty: Black Ops 4 (PS4)", 24.66, 0.564,
-                                "3.94 x 0.59 x 5.91 inches; 0.56 Ounces", 0.13);
-    cout << game->toString();
+    auto game = new Digital("Call of Duty: Black Ops 4 (PS4)", 24.66, 0.564,
+                            "3.94 x 0.59 x 5.91 inches; 0.56 Ounces", 0.13);
+    std::cout << game->toString();
     dynamic_cast<Game *>(game)->save("factura.csv");
 
     return 0;
