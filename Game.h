@@ -14,7 +14,7 @@ using namespace std;
  public:
      Game();
 
-     [[maybe_unused]] Game(std::string name, double price, double tax);
+     Game(std::string name, double price, double tax);
 
      Game(std::string name, double price, double tax, double itemWeight, std::string productDimensions);
 

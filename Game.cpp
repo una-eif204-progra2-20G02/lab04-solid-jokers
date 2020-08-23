@@ -14,7 +14,7 @@ Game::Game() {
     productDimensions="";
 }
 
-[[maybe_unused]] Game::Game(std::string name, double price, double tax) : name(std::move(name)), price(price), tax(tax){}
+Game::Game(std::string name, double price, double tax) : name(std::move(name)), price(price), tax(tax){}
 
 Game::Game(std::string name, double price,double tax, double itemWeight,std::string productDimensions) : name(std::move(name)), price(price),tax(tax), itemWeight(itemWeight),productDimensions(std::move(productDimensions)) {}
 

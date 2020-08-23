@@ -13,10 +13,7 @@ double Digital::discount() {
     return 0.15;
 }
 
-Digital::Digital(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name, price,
-                                                                                                            itemWeight,
-                                                                                                            productDimensions,
-                                                                                                            tax) {
+Digital::Digital(string name, double price,double tax ,double itemWeight, string productDimensions ) : Game(name, price,tax,itemWeight,productDimensions) {
     setName(name);
     setPrice(price);
     setItemWeight(itemWeight);

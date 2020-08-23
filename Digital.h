@@ -15,7 +15,7 @@ using namespace std;
 
 class Digital : public IDiscount, IReplace, public Game {
 public:
-    Digital(string name, double price, double itemWeight, string productDimensions, double tax);
+    Digital(string name, double price, double tax,double itemWeight, string productDimensions );
 
     double discount() override;
 
