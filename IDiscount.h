@@ -11,3 +11,4 @@ public:
 };
 
 #endif //LAB04_SOLID_IDISCOUNT_H
+//7
