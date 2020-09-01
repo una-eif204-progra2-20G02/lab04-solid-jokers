@@ -15,7 +15,7 @@ class Physical : IShipment, public Game {
 public:
     Physical(const string& name, double price,double tax, double itemWeight, const string& productDimensions);
 
-    void shipment() override;
+    string shipment() override;
 
     ~Physical();
 

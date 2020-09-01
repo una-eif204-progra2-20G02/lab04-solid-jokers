@@ -13,8 +13,8 @@ Physical::Physical(const string& name, double price, double tax,double itemWeigh
     setTax(tax);
 }
 
-void Physical::shipment() {
-    cout << "this product will have a shipment." << endl;
+string Physical::shipment() {
+    return "this product will have a shipment.";
 }
 
 string Physical::toString() {

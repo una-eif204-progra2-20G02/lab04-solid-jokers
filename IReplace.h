@@ -7,7 +7,7 @@
 
 class IReplace {
 public:
-    virtual void replace() = 0;
+    virtual std::string replace() = 0;
 };
 
 #endif //LAB04_SOLID_IREPLACE_H

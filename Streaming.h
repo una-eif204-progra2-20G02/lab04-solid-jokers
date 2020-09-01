@@ -13,9 +13,9 @@ using namespace std;
 class Streaming : IReplace, public Game {
 
 public:
-    Streaming(const string& name, double price,double tax, double itemWeight, const string& productDimensions);
+    Streaming(const string &name, double price, double tax);
 
-    void replace() override;
+    string replace() override;
 
     string toString() override;
 

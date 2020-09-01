@@ -11,8 +11,7 @@
 using namespace std;
 
 int main() {
-    Digital *game = new Digital("Call of Duty: Black Ops 4 (PS4)", 24.66,0.13, 0.564,
-                            "3.94 x 0.59 x 5.91 inches; 0.56 Ounces");
+    Digital *game = new Digital("Call of Duty: Black Ops 4 (PS4)", 24.66, 0.13);
     std::cout << game->toString();
     dynamic_cast<Game *>(game)->save("factura.csv");
 

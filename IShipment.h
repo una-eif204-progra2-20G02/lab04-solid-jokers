@@ -7,7 +7,7 @@
 
 class IShipment {
 public:
-    virtual void shipment() = 0;
+    virtual string shipment() = 0;
 };
 
 #endif //LAB04_SOLID_ISHIPMENT_H
