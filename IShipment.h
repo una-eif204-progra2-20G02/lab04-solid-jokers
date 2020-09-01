@@ -5,6 +5,10 @@
 #ifndef LAB04_SOLID_ISHIPMENT_H
 #define LAB04_SOLID_ISHIPMENT_H
 
+#include "iostream"
+
+using namespace std;
+
 class IShipment {
 public:
     virtual string shipment() = 0;
