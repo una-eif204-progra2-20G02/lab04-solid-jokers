@@ -6,7 +6,7 @@
 #define LAB04_SOLID_IREPLACE_H
 
 class IReplace {
-public:
+private:
     virtual std::string replace() = 0;
 };
 

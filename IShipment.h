@@ -10,7 +10,7 @@
 using namespace std;
 
 class IShipment {
-public:
+private:
     virtual string shipment() = 0;
 };
 

@@ -6,7 +6,7 @@
 #define LAB04_SOLID_IDISCOUNT_H
 
 class IDiscount {
-public:
+private:
     virtual double discount() = 0;
 };
 
