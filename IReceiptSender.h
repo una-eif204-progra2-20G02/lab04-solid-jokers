@@ -11,8 +11,9 @@ using namespace std;
 
 class IReceiptSender {
 public:
-    virtual string receiptSender();
+    virtual string receiptSender() = 0;
 
+    ~IReceiptSender();
 };
 
 #endif //LAB04_SOLID_IRECEIPTSENDER_H

@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class GameManager : public ISave, public IReceiptSender {
+class GameManager : public ISave {
 public:
     void save(string fileName, string save) override;
 

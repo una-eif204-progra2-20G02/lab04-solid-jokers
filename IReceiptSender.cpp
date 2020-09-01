@@ -3,4 +3,4 @@
 //
 #include "IReceiptSender.h"
 
-string IReceiptSender::receiptSender() { return ""; }
+IReceiptSender::~IReceiptSender() {}

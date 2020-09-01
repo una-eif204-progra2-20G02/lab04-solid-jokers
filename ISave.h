@@ -12,10 +12,9 @@ using namespace std;
 
 class ISave {
 public:
-    virtual void save(string filename, string save) {
+    virtual void save(string filename, string save) = 0;
 
-    }
-
+    ~ISave();
 };
 
 #endif //LAB04_SOLID_ISAVE_H
